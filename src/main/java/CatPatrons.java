@@ -12,29 +12,29 @@ public class CatPatrons {
         this.status = patronStatus.Silver;
     }
 
-    public void  addCat (Cat catToAdd) {
+    public void addCat(Cat catToAdd) {
         listOfPatronageCats.add(catToAdd);
         status = getStatus();
-        }
+    }
 
-    public void addBelovedCat (Cat catToAdd){
+    public void addBelovedCat(Cat catToAdd) {
         listOfPatronageCats.addFirst(catToAdd);
         status = getStatus();
     }
 
-    public void  getBelovedCat(){
-        if(!listOfPatronageCats.isEmpty())
+    public void getBelovedCat() {
+        if (!listOfPatronageCats.isEmpty())
             System.out.println(String.format("Beloved cat for %s is %s", name, listOfPatronageCats.get(0).getName()));
         else
             System.out.println("Can't find beloved cat for " + name);
     }
 
-    private  patronStatus getStatus(){
+    private patronStatus getStatus() {
         int size = listOfPatronageCats.size();
-        if (size<2)
+        if (size < 2)
             return patronStatus.Silver;
         else
-            return  (size<5) ? patronStatus.Gold : patronStatus.Platinum;
+            return (size < 5) ? patronStatus.Gold : patronStatus.Platinum;
     }
 
 

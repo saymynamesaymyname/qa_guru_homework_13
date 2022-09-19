@@ -15,20 +15,19 @@ public class CatCafe {
     public void findCatInCafe(Cat findCat) {
         for (UUID key : cats.keySet()) {
             Cat value = cats.get(key);
-            if(value.equals(findCat))
-            {
+            if (value.equals(findCat)) {
                 System.out.println(value.getName());
                 System.out.println("Cat " + findCat.getName() + " found!");
                 return;
             }
-            }
+        }
         System.out.println("Cat " + findCat.getName() + "  not found!");
     }
 
-  public void takeCatFromCafe(Cat findCat) {
+    public void takeCatFromCafe(Cat findCat) {
         for (UUID key : cats.keySet()) {
             Cat value = cats.get(key);
-            if(value.equals(findCat));
+            if (value.equals(findCat)) ;
             cats.remove(key);
         }
 
@@ -37,8 +36,6 @@ public class CatCafe {
     public void addCat(Cat catToAdd) {
         cats.put(UUID.randomUUID(), catToAdd);
     }
-
-
 
 
 }

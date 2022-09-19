@@ -4,7 +4,7 @@ import java.util.List;
 
 public class CatsMedication {
     private LocalDate date;
-    private Cat  cat;
+    private Cat cat;
     private List<String> medicationList = new ArrayList();
 
     public CatsMedication(Cat cat, LocalDate date) {
@@ -16,15 +16,15 @@ public class CatsMedication {
         medicationList.add(medication);
     }
 
-    public  void printInfoAboutMedication() {
+    public void printInfoAboutMedication() {
         System.out.println("On " + date.toString());
         System.out.println("Cat " + cat.getName() + " got medications");
-        if(medicationList.isEmpty())
+        if (medicationList.isEmpty())
             System.out.println("No medication");
         else {
-            for (int i=0; i< medicationList.size(); i++) {
+            for (int i = 0; i < medicationList.size(); i++) {
                 System.out.println(medicationList.get(0));
-            }
             }
         }
     }
+}

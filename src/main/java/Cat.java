@@ -37,8 +37,8 @@ public class Cat {
     }
 
     public void hasColor(String searchColor) {
-     String message = colors.contains(searchColor)? "%s has color %s" : "%s has no color %s";
-          System.out.println(String.format(message, name, searchColor));
+        String message = colors.contains(searchColor) ? "%s has color %s" : "%s has no color %s";
+        System.out.println(String.format(message, name, searchColor));
 
     }
 
@@ -47,7 +47,7 @@ public class Cat {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cat cat = (Cat) o;
-        return age == cat.age && name.equals(cat.name) && colors.size()==cat.colors.size()
+        return age == cat.age && name.equals(cat.name) && colors.size() == cat.colors.size()
                 && colors.containsAll(cat.colors);
     }
 
